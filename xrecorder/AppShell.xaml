@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
+
 <Shell
     x:Class="xrecorder.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:xrecorder"
+    xmlns:views="clr-namespace:xrecorder.Views"
     Title="xrecorder">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    Title="Home"
+    ContentTemplate="{DataTemplate views:LandingPage}" />
 
-</Shell>
+</Shell><!--<Border
+                    StrokeThickness="0"
+                    BackgroundColor="#FFFFFF"
+                    Opacity="0.95"
+                    Padding="14">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="24" />
+                    </Border.StrokeShape>
+
+                    <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                        <Label
+                            Text="Preview"
+                            FontAttributes="Bold"
+                            TextColor="#2B2B2B"
+                            FontSize="14"/>
+
+                        <Image
+                            Grid.Row="1"
+                            Source="preview.png"
+                            Aspect="AspectFill"
+                            HeightRequest="240"/>
+                    </Grid>
+                </Border>-->

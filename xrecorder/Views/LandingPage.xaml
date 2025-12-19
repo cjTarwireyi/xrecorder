@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xrecorder.Views.LandingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Transparent">
+
+    <Grid>
+
+        <!-- Background gradient -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FF6A00" Offset="0.0" />
+                <GradientStop Color="#FFB347" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Soft blobs -->
+        <Ellipse
+            WidthRequest="280"
+            HeightRequest="280"
+            Fill="#FFFFFF"
+            Opacity="0.12"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="0,-90,-110,0" />
+
+        <Ellipse
+            WidthRequest="220"
+            HeightRequest="220"
+            Fill="#FFFFFF"
+            Opacity="0.10"
+            HorizontalOptions="Start"
+            VerticalOptions="End"
+            Margin="-120,0,0,-80" />
+
+        <Ellipse
+            WidthRequest="160"
+            HeightRequest="160"
+            Fill="#FFFFFF"
+            Opacity="0.08"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Margin="0,120,0,0" />
+
+        <!-- Main content -->
+        <ScrollView>
+            <VerticalStackLayout Padding="24" Spacing="20">
+
+                <!-- Top bar -->
+                <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Start">
+                    <Border
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        StrokeThickness="0"
+                        BackgroundColor="White">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label
+                            Text="●"
+                            TextColor="#FF6A00"
+                            FontSize="22"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                    </Border>
+
+                    <Label
+                        Grid.Column="1"
+                        Text="XRecorder"
+                        TextColor="White"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        Margin="12,0,0,0"/>
+
+                    <Button
+                        Grid.Column="2"
+                        Text="⚙"
+                        FontSize="18"
+                        BackgroundColor="White"
+                        TextColor="#FF6A00"
+                        CornerRadius="14"
+                        WidthRequest="44"
+                        HeightRequest="44"
+                        Padding="0"
+                        HorizontalOptions="End"/>
+                </Grid>
+
+                <!-- Hero -->
+                <VerticalStackLayout Spacing="8">
+                    <Label FontSize="40" FontAttributes="Bold" TextColor="White" LineBreakMode="WordWrap">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Capture your screen&#10;" />
+                                <Span Text="with " />
+                                <Span Text="Ease" TextColor="#FFE7A3" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label
+                        Text="Record in HD, capture audio, and share instantly — all in one tap."
+                        TextColor="#FFFFFF"
+                        Opacity="0.90"
+                        FontSize="15"/>
+                </VerticalStackLayout>
+
+                <!-- Preview card (Border instead of Frame) -->
+                
+
+                <!-- Features -->
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Features" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+
+                    <!-- Feature tile template repeated -->
+                    <Border StrokeThickness="0" BackgroundColor="#FFFFFF" Opacity="0.92" Padding="14">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16" />
+                        </Border.StrokeShape>
+
+                        <Grid ColumnDefinitions="46,*,Auto" ColumnSpacing="12">
+                            <Border WidthRequest="46" HeightRequest="46" StrokeThickness="0" BackgroundColor="#FF6A00" Opacity="0.15">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="14" />
+                                </Border.StrokeShape>
+                                <Label Text="🎥" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                <Label Text="HD Recording" FontAttributes="Bold" FontSize="15" TextColor="#222"/>
+                                <Label Text="Crystal clear 1080p+ quality." FontSize="12" TextColor="#666"/>
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2" Text="›" FontSize="22" TextColor="#999" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#FFFFFF" Opacity="0.92" Padding="14">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16" />
+                        </Border.StrokeShape>
+
+                        <Grid ColumnDefinitions="46,*,Auto" ColumnSpacing="12">
+                            <Border WidthRequest="46" HeightRequest="46" StrokeThickness="0" BackgroundColor="#FF6A00" Opacity="0.15">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="14" />
+                                </Border.StrokeShape>
+                                <Label Text="✂️" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                <Label Text="Quick Edit" FontAttributes="Bold" FontSize="15" TextColor="#222"/>
+                                <Label Text="Trim and share in seconds." FontSize="12" TextColor="#666"/>
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2" Text="›" FontSize="22" TextColor="#999" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+
+                    <Border StrokeThickness="0" BackgroundColor="#FFFFFF" Opacity="0.92" Padding="14">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16" />
+                        </Border.StrokeShape>
+
+                        <Grid ColumnDefinitions="46,*,Auto" ColumnSpacing="12">
+                            <Border WidthRequest="46" HeightRequest="46" StrokeThickness="0" BackgroundColor="#FF6A00" Opacity="0.15">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="14" />
+                                </Border.StrokeShape>
+                                <Label Text="🔊" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                <Label Text="Audio Capture" FontAttributes="Bold" FontSize="15" TextColor="#222"/>
+                                <Label Text="Mic audio supported." FontSize="12" TextColor="#666"/>
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2" Text="›" FontSize="22" TextColor="#999" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+
+                <!-- CTA -->
+                <VerticalStackLayout Spacing="10">
+                    <Button
+                        Text="Start Recording"
+                        BackgroundColor="White"
+                        TextColor="#FF6A00"
+                        CornerRadius="22"
+                        HeightRequest="56"
+                        FontAttributes="Bold"
+                        Clicked="OnStartRecordingClicked"/>
+
+                    <HorizontalStackLayout Spacing="16" HorizontalOptions="Center">
+                        <Label Text="Privacy" TextColor="White" Opacity="0.85">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnPrivacyTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="•" TextColor="White" Opacity="0.6"/>
+
+                        <Label Text="Terms" TextColor="White" Opacity="0.85">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTermsTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="•" TextColor="White" Opacity="0.6"/>
+
+                        <Label Text="Help" TextColor="White" Opacity="0.85">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnHelpTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
