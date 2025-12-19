@@ -1,0 +1,56 @@
+﻿## --- .NET / MSBuild ---
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.patch
+*.nupkg
+
+## --- Visual Studio ---
+.vs/
+.vscode/
+*.swp
+*.lut
+*.vshost.exe
+*.vshost.exe.config
+*.vshost.exe.manifest
+*.ide/
+
+## --- Visual Studio 2025 / .NET 9+ ---
+# Ignore solution user-specific settings for the new XML format
+*.slnx.user
+
+## --- MAUI / Mobile Specific ---
+# Android
+*.apk
+*.aab
+*.dex
+*.class
+*.ap_
+# iOS / macOS
+[Dd]erivedData/
+*.app
+*.ipa
+*.build
+*.xcarchive
+.DS_Store
+
+## --- NuGet ---
+# NuGet packages are restored on build; do not track them
+node_modules/
+packages/
+!packages/repositories.config
+*.nuget.props
+*.nuget.targets
+
+## --- Local Environment / Secrets ---
+appsettings.Development.json
+secrets.json
+*.p12
+*.keystore
+*.jks
